@@ -4,10 +4,14 @@
 function theme_files()
 {
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/style.css' );
+	wp_enqueue_script( 'cycle-2', get_template_directory_uri() . '/js/jquery.cycle2.js', array('jquery'), true, true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_files');
 // Title Tag Support
 add_theme_support( 'title-tag' );
+
+// Featured Images
+add_theme_support( 'post-thumbnails' ); 
 
 //Theme support
 add_theme_support( 'custom-logo', array(
